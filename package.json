@@ -1,6 +1,6 @@
 {
   "name": "vue-photoswipes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Vue integration PhotoSwipe image preview plugin",
   "main": "/dist/vue-photoswipe.min.js",
   "scripts": {

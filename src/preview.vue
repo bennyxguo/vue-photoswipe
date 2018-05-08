@@ -13,7 +13,7 @@
             <div v-if="container == 'background'" class="photoswipe-container" :style="'background-size:'+bgtype+';background-image:url('+item.src+');'" :data-src="item.src"></div>
             <img :src="item.src" :id="'preview'+key" v-show="false"/>
           </a>
-          <figcaption style="display: none" itemprop="caption description">{{item.title}}</figcaption>
+          <figcaption style="display: none" itemprop="caption description" v-html="item.title"></figcaption>
         </figure>
       </template>
     </div>
