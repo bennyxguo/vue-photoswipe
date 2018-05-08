@@ -59,14 +59,7 @@ const VuePreview = {
               }
               if (linkEl.children.length > 0) {
                 // <img> thumbnail element, retrieving thumbnail url
-                item.msrc = linkEl.children[0].getAttribute('src')
-                console.log(linkEl.children)
-                if (self.container === 'img') {
-                  item.msrc = linkEl.children[1].getAttribute('src')
-                } else {
-                  item.msrc = linkEl.children[1].getAttribute('data-src')
-                }
-                
+                item.msrc = linkEl.children[1].getAttribute('src')
               }
               item.el = figureEl // save link to element for getThumbBoundsFn
               items.push(item)
@@ -146,8 +139,11 @@ const VuePreview = {
               // define gallery index (for URL)
               galleryUID: galleryElement.getAttribute('data-pswp-uid'),
               getThumbBoundsFn: function (index) {
-                // See Options -> getThumbBoundsFn section of documentation for more info
-                let thumbnail = items[index].el.getElementsByTagName('img')[0] // find thumbnail
+                // See Options -> getThumbBoundsFn section of documentation for more info\
+                let thumbnail = items[index].el.getElementsByTagName('a')[0].children[0]// find thumbnail
+                if (!thumbnail) {
+                  let thumbnail = items[index].el.getElementsByTagName('img')[0] // find thumbnail
+                }
                 let pageYScroll = window.pageYOffset || document.documentElement.scrollTop
                 let rect = thumbnail.getBoundingClientRect()
                 return {x: rect.left, y: rect.top + pageYScroll, w: rect.width}
