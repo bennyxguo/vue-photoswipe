@@ -67,6 +67,11 @@
     background-position: center;
   }
 
+  .my-gallery figure {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
   .photo-swipe-max-size,
   .photo-swipe-max-size figure,
   .photo-swipe-max-size a,
