@@ -52,7 +52,7 @@ Vue.use(preview, {
 
 ```html
 <template>
-  <vue-preview :slides="slide1" @close="handleClose"></vue-preview>
+  <vue-preview :slides="slide1" @close="handleClose" :fallback="https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_m.jpg"></vue-preview>
 </template>
 
 <script>
@@ -89,6 +89,13 @@ export default {
 ```
 
 ### Prop
+
+##### Property
+|  Property | Description
+| :---      | :---
+| slides    | Image data
+| fallback  | Default image - if image is not found, will display fallback image instead
+
 
 ##### slide item options
 

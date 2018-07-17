@@ -35,12 +35,12 @@
   <h1>Vue Photoswipe</h1>
   <div>
     <h5>Gallery one</h5>
-    <vue-preview :slides="slide1" :container="'img'" @close="handleClose"></vue-preview>
+    <vue-preview :slides="slide1" :container="'img'" @close="handleClose" :fallback="'https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_m.jpg'"></vue-preview>
   </div>
   <div>
     <h5>Gallery two</h5>
     <div class="outer-container">
-      <vue-preview :slides="slide2" :container="'background'" :bgtype="'contain'" @close="handleClose"></vue-preview>
+      <vue-preview :slides="slide2" :container="'background'" :bgtype="'contain'" @close="handleClose" :fallback="'https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_m.jpg'"></vue-preview>
     </div>
   </div>
 </div>
@@ -51,8 +51,8 @@
       return {
         slide1: [
           {
-            src: 'https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_b.jpg',
-            msrc: 'https://farm6.staticflickr.com/5591/15008867125_68a8ed88cc_m.jpg',
+            src: 'error.jpg',
+            msrc: 'error.jpg',
             alt: 'picture1',
             title: 'Image Caption 1',
             w: 600,

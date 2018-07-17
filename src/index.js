@@ -20,6 +20,12 @@ const VuePreview = {
             return 'cover'
           }
         },
+        fallback: {
+          type: String,
+          default: function () {
+            return ''
+          }
+        }
       },
       methods: {
         initPhotoSwipeFromDOM (gallerySelector) {
@@ -193,6 +199,14 @@ const VuePreview = {
           const hashData = photoSwipeParseHash()
           if (hashData.pid && hashData.gid) {
             openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true)
+          }
+        },
+        handleErrorImg (key) {
+          if (this.slides[key].src !== this.fallback) {
+            this.slides[key].src = this.fallback
+          }
+          if (this.slides[key].msrc !== this.fallback) {
+            this.slides[key].msrc = this.fallback
           }
         }
       },
