@@ -1,5 +1,20 @@
 # Vue Photoswipe plugin
 
+<p>
+  <a href="https://circleci.com/gh/TriDiamond/vue-photoswipe/tree/master">
+    <img src="https://img.shields.io/circleci/project/github/TriDiamond/vue-photoswipe.svg" alt="Build Status">
+  </a>
+  <a href="https://github.com/TriDiamond/vue-photoswipe/stargazers">
+    <img src="https://img.shields.io/github/stars/TriDiamond/vue-photoswipe.svg" alt="Github starts">
+  </a>
+  <a>
+    <img src="https://img.shields.io/github/license/TriDiamond/vue-photoswipe.svg" alt="License">
+  </a>
+  <a href="https://www.npmjs.com/package/vue-photoswipes">
+    <img src="https://img.shields.io/npm/dt/vue-photoswipes.svg" alt="Npm downloads">
+  </a>
+</p>
+
 > 一 A Vue Integrated [PhotoSwipe](https://github.com/dimsemenov/PhotoSwipe) Image Preview Plugin
 
 <!-- ![](https://img.shields.io/npm/dm/vue-preview.svg)
