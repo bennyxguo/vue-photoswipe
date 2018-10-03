@@ -8,10 +8,10 @@
           itemtype="http://schema.org/ImageObject"
           :key="key"
           >
-          <a :href="item.src" itemprop="contentUrl" :data-id="'preview'+key">
+          <a :href="item.src" itemprop="contentUrl" :data-id="'preview'+ item.uuid">
             <img :src="item.msrc" :alt="item.alt" itemprop="thumbnail" @error="handleErrorImg(key)" v-if="container == 'img'"/>
             <div v-if="container == 'background'" class="photoswipe-container" :style="'background-size:'+bgtype+';background-image:url('+item.src+');'" :data-src="item.src"></div>
-            <img :src="item.src" :id="'preview'+key" @error="handleErrorImg(key)" v-show="false"/>
+            <img :src="item.src" :id="'preview'+ item.uuid" @error="handleErrorImg(key)" v-show="false"/>
           </a>
           <figcaption style="display: none" itemprop="caption description" v-html="item.title"></figcaption>
         </figure>

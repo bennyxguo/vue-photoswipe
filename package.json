@@ -1,6 +1,6 @@
 {
   "name": "vue-photoswipes",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Vue integration PhotoSwipe image preview plugin",
   "main": "/dist/vue-photoswipe.min.js",
   "scripts": {
@@ -38,8 +38,8 @@
     "vue": "^2.5.13",
     "vue-loader": "^14.1.1",
     "vue-template-compiler": "^2.5.13",
-    "webpack": "^4.0.1",
-    "webpack-cli": "^2.0.10",
+    "webpack": "4.19.1",
+    "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.0"
   }
 }

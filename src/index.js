@@ -208,6 +208,15 @@ const VuePreview = {
           if (this.slides[key].msrc !== this.fallback) {
             this.slides[key].msrc = this.fallback
           }
+        },
+        uniqueId: () => {
+          return '_' + Math.random().toString(36).substr(2, 9)
+        }
+      },
+      beforeMount () {
+        // Generate unique ID
+        for (let i = 0; i < this.slides.length; i++) {
+          this.slides[i].uuid = this.uniqueId()
         }
       },
       mounted () {
